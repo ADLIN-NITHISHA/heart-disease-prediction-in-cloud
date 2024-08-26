@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=FmSDB12G75hOedxMbaaSgau6_nkB514FBkMAUgkW7OYp6lCkRyHuN3ECqESHI0Uacn9SKBcnIkivBT4yp80mtdd4Qd7nNz2DqgBTWoKoAwXZNJIqWDL7rTpYHU2FWVDzqUrqvEMpNvTey0B7Hz7eGtvtF8wijfAzhIAyrJstXWyXK_1KXApGKUj4lwqcsZfoxMHbwsoIZkMr7pncznOHVY-oVKHbbab1EmZgf4uFyi9BvnBVnUOvq-QHNBS7iRNVXm-JEQ7pDdVuGidI9ShoZt43o70XNLyAOCct2TFPX2DI0qTlmm7cg6966XNuoc5xO3SSMkPuHFLwEqY5nAWlzRriVIDHX6CmeeA_IKUZTs6RBylCJqZ4TCKAZ1G17vAlDkMtTJ14nV2aAEYFlwqDFyDbXbb31SjyKNJ59EDfWpyl9FbjEftu-jJ5rypgF62oTAmYIF0AmHLgiEKGqTEGZ_URnLQoIEzoZqQ7Ax7n97g6PyvEhzmVM_1oN6kU37btfHyVnY72l-IGBJ_88dEGWtxN4IjydEkS9OTRYjc7en80_WA4rTysngg8EyScFqYqXrUwhc6mVvcsr5nFeLTl7B01hkK7b3w3xiMYA_Jq1FTp2pGsCtMnST1KO23IofIKNHrhSYgajFf0LUUWRiXeANs1sJJCMCRvSAE4rrRjisF0n6uikhO5OoI0oEgmh6UvLHqlKaa-1OzFpeEaQmetVO8ulYVEmCpktYZ0nn6qNN84CJi7x0ls3yHBTwVACuSPxgomaxi9fQZCiTkw5bSv2_4dowotHTYRNGQY8SuMSxkI8Zj0PS5CfECAOGVI-lpsjd_KnA2Ctgvnhh_a8EyGIp32bgUFE6eFTzn9SzhYoF_nY8Ry6muvqW2X5ngN2oeI3_2739f9EnhA0rNflN6aNp6lHM47aBx3pSmEAgiDDMSBB1bDN6iC8t05mHOF0WYyiNpx3mDlQhC2kVntarC7cjiniC5LiCT5lbbO3i_vUHGUvhXk4L96nc_ooEImxbW6r_npco9kL6QEKeD1f2SU2xQTJDIRtR30zCgHzai_cCRFmbqj20SeEE-QjPgsXQGeCQxL1FHWziZI_5J_JT0NqyHSTxKV1oa-S8tAea08si3wwgiSld_d8u-qtNIuuTvkZ5diZ5Js0yhL8RAWyt7ptfLn2G-wK1LYMsKNCmMIs1gejp4I6tPDD73QNBzc6ChXV5WSch5b4SrcxAkQtgfjnmq6pb54OlyyMc4Z-Fe_rPxl1C_TI_4OKt4IFIwnZxEuG0zsrr1p5d41fWt80sP--yBqTf4DbL1dfglYd_1DveByFdHF74xMjts06HRQlDbYKykBBJFxMzcmIaEyCvPiVp7wjfIb_dL5fTGnONJN_nauJWsizPDSqIAWZlkwBPw_vcOjx0e7UFMH4QoLk3KKCKOGhNM5OUswkH21bgIttRNLWA2bmOltoeox1MBmloQjoo8JbWWt6_X-AmTn4hHFRVXLP2nIOeW3TE4GXp2oGQCh0W_quZnVrryluCpeuQQv05EA_tzgES9h3x-1GrgpIHDkBSbADApFtjMctLVMknCzPxDF0P_28wuvzEYQpr9EezCgDlbmRBeHBWD37_9HCCBOv8pJ-HnB9_deEOoVncMdiaZH-Y05qFcKDMdYQ9Ax" nonce="fc14e05f630431aa6b99d1c00debc790" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPWUzYjYwZDMyMDUmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxODA4Mzc5MDg3NzgxNzQwMDQ0JnRoPTE5MThhNzMyZmE3OWJlMGMmdmlldz1hdHQmZGlzcD1zYWZlJnJlYWxhdHRpZD1mX20wOXQyb2N6NCZzYWRkYmF0PUFOR2pkSjhkb3JFUzE3Qi0xSlByRDEzUG9CQ0xWLXQyZzBrdjFaZFRLbkdLam5RZWdXSW5abHM2dGdfaFk0MUZoR1ZQNkNjclc2ZUhDNFpaWFU3ZGRUZ2tmenZmMmNMREhKSjF2S04tY0JKbjFzSEZYQVozcVNidjM3NVptS3p1NE1JeUpGUExIZjZPaWdPUExMQ0ZGb3BjT2p4cEh5N1VrU1dyR1hlMzlHNXpmVTNDQmxuSDN5U3VzbEprZ2hmTFZseTREQk1qVmhrR0xWWlhKeU1Ud19lUGl3NDNjc2JQNHg1QjlCM01kd0xaRWtyNEtRWktHM0xLRl9MOU9JUGd3YmROWWtZVkdwRWxjNjZGYTM1eWxsdFV6dHJ6SEZ0RGJjbDdCNXAyNWppdnpFeURPMjRtSGpyWGZHVVlKOUVJVkdzeU5PYlVNR0JxdjY4MFNTclkwZ1R2UnF6Ti1yajFrMlh4bVBRNXAwZWJfX0ZVS19ZTVVLM1ZGS3ZaZmFlWXAzMnduUEhvSmFqMEZESkctNGp2T1VEZ0lTYWoxSUNmbnl0a0IwY3I2RlJXb3V5eWdhdFFIVzR4d0lWenV4LWFaeC1rLXdEaG9mQUtJVnVfYWxFR1JGMF95Y3A1b2NxMEp1LThVVjRoOHhWeGZ6bXMxVXZKTVJsdlNhY19Ua0Rxa3dLZVR5ZElVV2J0MmFETTZSV2RmTHMwUnVQMUxyUUVlZmZiaUs2YWlCM0ppOGhvYzBXUE5ja0R3NGVQR2ZjdkIxbGU3c0pXZUZkU2VOTzlkRjNOYjFDUktCT01uWlBiZ1RaN3dRSUd6WDRfc1NuUG9KLWVTS2gyOTVhX2d6RkgyNXpiSDRpdjBIOUIyQlYzc0k5SlgxRjBiY015bTlOeTJjS3VsLUhwcmQ2eThBZ011X0JrTFZzdWtOM0xTVl9MTTFTS0xMX2VEaXdtMFpLNEVOaF82LUEzaVhFTUtrQXB5eVB0ZUF6UWJJTG1OQzQxdkxhcmNCeWQtZUtFbHlRWF9MUnRPNWc4ZlIyU1BDS0lKN0FDa3pqT2Y5amVXRFBBWFhMS3VzNGZBeWtTZDFpU09pM0ZPRktRZHpvYUZiRTZCaUdUYnktNk5NaEZQbFRaMjJtUDVpbXBybEZXNXJZMkpHUjZaUXUzU1VuN1ZsR2RGMV9SYzRLYlB1V3hsMXlQUzBKUlJvdjlVUGd3TWFrbGptVTFhc3Y2WVVWbDZjZWNWYVlYQVNwdmxuNGdHUDIzSktOcm4wZVl5Vlk3MzNWOENhdFk1clR1TkNXWkZrRHpGT2hJeDhUeVZTbjZ1T29mOE9yNVhxQUtxR2JrVGR1ZmduY09NdENNN2JXbm1POA"/><style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 20px; /* Add margin to ensure space around the container */
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Disease Prediction</h2>
+        <form method="POST" action="/predict">
+            <!-- Form fields remain the same -->
+            <label for="BMI">BMI:</label>
+            <input type="number" step="any" name="BMI" required>
+
+            <label for="Weight_(kg)">Weight (kg):</label>
+            <input type="number" step="any" name="Weight_(kg)" required>
+
+            <label for="Height_(cm)">Height (cm):</label>
+            <input type="number" step="any" name="Height_(cm)" required>
+
+            <label for="Sex">Sex:</label>
+            <select name="Sex" required>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <label for="Checkup">Checkup Frequency:</label>
+            <select name="Checkup" required>
+                <option value="0">Never</option>
+                <option value="1">1+ years ago</option>
+                <option value="2">Within the past year</option>
+                <option value="3">Within the past 6 months</option>
+                <option value="4">Within the past month</option>
+            </select>
+
+            <label for="Exercise">Exercise Regularity:</label>
+            <select name="Exercise" required>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Always</option>
+            </select>
+
+            <label for="Skin_Cancer">Skin Cancer:</label>
+            <select name="Skin_Cancer" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="Other_Cancer">Other Cancer:</label>
+            <select name="Other_Cancer" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="Depression">Depression:</label>
+            <select name="Depression" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="Arthritis">Arthritis:</label>
+            <select name="Arthritis" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="Diabetes">Diabetes:</label>
+            <select name="Diabetes" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="Smoking_History">Smoking History:</label>
+            <select name="Smoking_History" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="Age_Category">Age Category:</label>
+            <select name="Age_Category" required>
+                <option value="0">18-24</option>
+                <option value="1">25-29</option>
+                <option value="2">30-34</option>
+                <option value="3">35-39</option>
+                <option value="4">40-44</option>
+                <option value="5">45-49</option>
+                <option value="6">50-54</option>
+                <option value="7">55-59</option>
+                <option value="8">60-64</option>
+                <option value="9">65-69</option>
+                <option value="10">70-74</option>
+                <option value="11">75-79</option>
+                <option value="12">80 or older</option>
+            </select>
+
+            <label for="General_Health">General Health:</label>
+            <select name="General_Health" required>
+                <option value="0">Excellent</option>
+                <option value="1">Very Good</option>
+                <option value="2">Good</option>
+                <option value="3">Fair</option>
+                <option value="4">Poor</option>
+            </select>
+
+            <label for="Alcohol_Consumption">Alcohol Consumption (drinks/day):</label>
+            <input type="number" step="any" name="Alcohol_Consumption" required>
+
+            <label for="Fruit_Consumption">Fruit Consumption (servings/day):</label>
+            <input type="number" step="any" name="Fruit_Consumption" required>
+
+            <label for="Green_Vegetables_Consumption">Green Vegetables Consumption (servings/day):</label>
+            <input type="number" step="any" name="Green_Vegetables_Consumption" required>
+
+            <label for="FriedPotato_Consumption">Fried Potato Consumption (servings/day):</label>
+            <input type="number" step="any" name="FriedPotato_Consumption" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+    </div>
+</body>
+</html>
