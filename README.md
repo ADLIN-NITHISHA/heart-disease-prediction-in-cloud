@@ -14,7 +14,7 @@ Programming Language: Python
 
 Libraries Used: pandas, numpy, matplotlib, seaborn, scikit-learn
 
-Machine Learning Algorithms: Logistic Regression, Random Forest, K-Nearest Neighbors
+Machine Learning Algorithms: Logistic Regression, Random Forest, Decision Tree
 
 Model Deployment: Flask Web App, AWS Hosting
 
@@ -27,7 +27,7 @@ Environment: Jupyter Notebook, colab
 Source: UCI Heart Disease Dataset
 
 Features:
-Age, Sex, Chest Pain Type, Blood Pressure, Cholesterol, Fasting Blood Sugar, ECG, Heart Rate, Exercise Induced Angina, ST Depression, etc.
+Age, Sex,General_Health, Blood Pressure, Cholesterol, Fasting Blood Sugar, Checkup, Exercise, Diabetes, Depression, Height_(cm), Weight_(cm), BMI, Smoking_History, Alcohol_Consumption, etc.
 
 Target: Presence of heart disease (1 = Yes, 0 = No)
 
@@ -36,6 +36,8 @@ Target: Presence of heart disease (1 = Yes, 0 = No)
 Handled missing values and performed outlier detection
 
 Visualized feature distributions using seaborn
+<img width="1078" height="666" alt="image" src="https://github.com/user-attachments/assets/3ea618f8-4402-4ef7-9af7-1bb5858a00f9" />
+
 
 Explored correlations and trends between variables
 
