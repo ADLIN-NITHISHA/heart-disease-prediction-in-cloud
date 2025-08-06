@@ -1,4 +1,4 @@
-💓 Heart Disease Prediction Using Machine Learning
+💓 HEART DISEASE PREDICTION USING MACHINE LEARNING ALGORITHMS
 🧠 Project Overview
 This project aims to predict the likelihood of cardiovascular disease using patient health data. The objective is to assist in early diagnosis by applying various machine learning algorithms and deploying the model using Flask and AWS.
 
